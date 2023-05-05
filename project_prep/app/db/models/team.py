@@ -13,3 +13,7 @@ class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    
+    # Methods
+    def __repr__(self):
+        return f'<Team id: {self.id}, name: {self.name} :: {self.created_at}>'

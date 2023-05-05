@@ -15,3 +15,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    
+    # Methods
+    def __repr__(self):
+        return f'<User id: {self.id}, email: {self.email} :: {self.created_at}>'

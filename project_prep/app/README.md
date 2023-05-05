@@ -109,6 +109,12 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
+
+    # Methods
+    def __repr__(self):
+        return f'<User id: {self.id}, email: {self.email} :: {self.created_at}>'
+
 ```
 
 Message
@@ -132,7 +138,11 @@ class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
-    
+
+     
+    # Methods 
+    def __repr__(self):
+        return f'<Message id: {self.id}, user_id: {self.user_id}, channel_id: {self.channel_id} sent: {self.sent_at}>'
 
 ```
 
@@ -158,6 +168,11 @@ class Channel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
+     
+    # Methods
+    def __repr__(self):
+        return f'<Channel id:{self.id}, name:{self.name} :: {self.created_at}>'
 ```
 
 Team
@@ -178,6 +193,11 @@ class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
+    
+    # Methods
+    def __repr__(self):
+        return f'<Team id: {self.id}, name: {self.name} :: {self.created_at}>'
 ```
 
 ### Join Tables (Memberships)
@@ -199,7 +219,11 @@ class channel_membership(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type: db.Column(db.String(150))
     joined_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
     
+    # Methods
+    def __repr__(self):
+        return f'<Channel (Membership) user_id{self.user_id}, team_id{self.team_id}>' 
 ```
 
 Team
@@ -219,5 +243,11 @@ class team_membership(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type: db.Column(db.String(150))
     joined_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
+    
+    # Methods
+    def __repr__(self):
+        return f'<Team (Membership) user_id{self.user_id}, channel_id{self.channel_id}>' 
+    
     
 ```

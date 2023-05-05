@@ -12,3 +12,8 @@ class team_membership(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     channel_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     
+    
+    # Methods
+    def __repr__(self):
+        return f'<Team (Membership) user_id{self.user_id}, channel_id{self.channel_id}>' 
+    
