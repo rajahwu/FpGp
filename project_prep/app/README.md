@@ -189,7 +189,7 @@ from datetime import datetime
 from ...dev import db
 
 
-class channel_membership:
+class channel_membership(db.Model):
     __tablename__ = "channel_memberships"
     # Foreign Keys
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
@@ -209,7 +209,7 @@ from datetime import datetime
 from ...dev import db
 
 
-class team_membership:
+class team_membership(db.Model):
     __tablename__ = "team_memberships"
     # Foreign Keys
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
