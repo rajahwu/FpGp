@@ -248,6 +248,4 @@ class team_membership(db.Model):
     # Methods
     def __repr__(self):
         return f'<Team (Membership) user_id{self.user_id}, channel_id{self.channel_id}>' 
-    
-    
 ```
