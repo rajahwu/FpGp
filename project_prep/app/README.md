@@ -71,23 +71,23 @@ Generate random string
 openssl rand -base64 12
 ```
 
-Sample File Structure
+Models
 
 ```code
-.
-├── .env
-├── .flaskenv
-├── app
-│   ├── __init__.py
-│   ├── config.py
-│   └── routes
-│       └── __init__.py
-└── models
-       └── __init__.py
-     
+db/
+├── dev.py
+├── models
+│   ├── __init__.py
+│   ├── channel.py
+│   ├── memberships
+│   │   ├── __init__.py
+│   │   ├── channel.py
+│   │   └── team.py
+│   ├── message.py
+│   ├── team.py
+│   └── user.py
+└── models.txt
 ```
-
-Models
 
 User
 
