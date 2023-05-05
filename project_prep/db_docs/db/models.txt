@@ -1,0 +1,12 @@
+___init__.py
+from .db import db
+
+from .users import users
+from .messages import messages
+from .channels import channels
+from .teams import teams
+
+from .memberships import channel, team
+
+class User:
+    __tablename__ = "users
