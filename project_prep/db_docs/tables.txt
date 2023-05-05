@@ -1,0 +1,38 @@
+__TABLES__
+    db.Column
+    id : int, primary_key
+    created_at : datetime() [moment]
+    updated_at : datetime() [moment]
+
+    __"users"__
+            first_name : str
+            last_name : str
+            email : str
+            hashed_password : str
+            profile_image_url : str
+            status : str [emum]
+
+    __"messages"__
+        fk(s) : channel_id, user_id
+           message: str
+           sent_at : [moment]
+
+    __"channels"__
+        fk(s) : team_id
+            name : str
+            description : str
+            type : str
+            image_url: str
+
+    __"teams"__
+        name : str
+        type : str
+        image_url
+
+__JOIN=TABLES__
+    db.column
+     fk(s) : user_id
+        type: str
+        status_joined : datetime()
+__"channel-membership"__.fk(s) : channel_id
+__"team-membership"__.fk(s) : team_id
