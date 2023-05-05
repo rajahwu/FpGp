@@ -34,5 +34,5 @@ __JOIN=TABLES__
      fk(s) : user_id
         type: str
         status_joined : datetime()
-__"channel-membership"__.fk(s) : channel_id
-__"team-membership"__.fk(s) : team_id
+__"channel-membership"__.fk(s) : team_id
+__"team-membership"__.fk(s) : channel_id
