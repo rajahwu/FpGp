@@ -1,6 +1,6 @@
 # README
 
-Flask App
+## Flask App
 
 app.init.py
 
@@ -71,7 +71,7 @@ Generate random string
 openssl rand -base64 12
 ```
 
-Models
+### Models
 
 ```code
 db/
@@ -160,7 +160,7 @@ class Channel(db.Model):
     updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
 ```
 
-Teams
+Team
 
 ```py
 from datetime import datetime
@@ -180,7 +180,7 @@ class Team(db.Model):
     updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
 ```
 
-Join Tables (Memberships)
+### Join Tables (Memberships)
 
 Channel
 
