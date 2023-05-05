@@ -155,21 +155,23 @@ Teams
 
 ```py
 from datetime import datetime
-from ...dev import db
+from ..dev import db
 
 
-class channel_membership:
-    __tablename__ = "channel_memberships"
+class Team(db.Model):
+    __tablename__ = "teams"
+    # Table Keys
+    name = db.Column(db.String(255), nullable=False)
+    type = db.Column(db.String(150))
+    image_url = db.Column(db.String(255))
+    
+    # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    type: db.Column(db.String(150))
-    joined_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    team_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    
+    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
 ```
 
-Join Tables (MemberShips)
+Join Tables (Memberships)
 
 Channel
 
