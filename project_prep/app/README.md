@@ -107,8 +107,8 @@ class User(db.Model):
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 ```
 
 Messages
@@ -130,8 +130,8 @@ class Message(db.Model):
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     
 
 ```
@@ -156,8 +156,8 @@ class Channel(db.Model):
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 ```
 
 Team
@@ -176,8 +176,8 @@ class Team(db.Model):
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 ```
 
 ### Join Tables (Memberships)
@@ -198,7 +198,7 @@ class channel_membership(db.Model):
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
     type: db.Column(db.String(150))
-    joined_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    joined_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     
 ```
 
@@ -218,6 +218,6 @@ class team_membership(db.Model):
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
     type: db.Column(db.String(150))
-    joined_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    joined_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     
 ```
