@@ -111,7 +111,7 @@ class User(db.Model):
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 ```
 
-Messages
+Message
 
 ```py
 from datetime import datetime
