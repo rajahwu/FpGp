@@ -11,5 +11,5 @@ class Team(db.Model):
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
-    updated_at = db.Column(db.DateTime, nullable=False, defalut=datetime.now())
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
