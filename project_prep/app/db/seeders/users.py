@@ -9,7 +9,6 @@ class UserSeeder:
     def __init__(self):
         self.fake = Faker()
 
-
     def generate_users(self, num):
         with app.app_context():
             for _ in range(num):
