@@ -6,10 +6,9 @@ from app.db.models import User
 
 
 class UserSeeder:
-    def __init__(self) -> None:
+    def __init__(self):
         self.fake = Faker()
 
-    fake = Faker()
 
     def generate_users(self, num):
         with app.app_context():
