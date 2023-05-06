@@ -19,6 +19,7 @@ pylint = "*"
 pycodestyle = "*"
 rope = "*"
 pytest = "*"
+faker = "*"
 
 [requires]
 python_version = "3.9"

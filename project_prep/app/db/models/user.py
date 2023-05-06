@@ -9,7 +9,7 @@ class User(db.Model):
     last_name = db.Column(db.String(255), nullable=False)
     email = db.Column(db.String(255), nullable=False)
     hashed_password = db.Column(db.String(255), nullable=False)
-    status = db.Column(db.String(255), nullable=False)
+    status = db.Column(db.String(255))
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)
