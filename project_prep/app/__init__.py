@@ -13,4 +13,8 @@ app.register_blueprint(channels_bp, url_prefix="/channels")
 
 @app.route("/")
 def index():
-    return "<h1>Home</h2>"
+        return "<h1>Home</h2>"
+    
+    
+def create_app():
+    return app

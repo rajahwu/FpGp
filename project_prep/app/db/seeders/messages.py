@@ -43,6 +43,6 @@ class MessageSeeder:
             db.session.commit()
             return num_deleted
         
-seeder = MessageSeeder()
-MessageSeeder.clear_messages()
-seeder.generate_messages()
+# seeder = MessageSeeder()
+# MessageSeeder.clear_messages()
+# seeder.generate_messages()
