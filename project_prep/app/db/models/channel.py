@@ -11,7 +11,7 @@ class Channel(db.Model):
     image_url = db.Column(db.String(255))
     
     # Foreign Keys
-    team_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    team_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)

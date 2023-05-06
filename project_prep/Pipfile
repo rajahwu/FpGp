@@ -12,6 +12,7 @@ python-dotenv = "*"
 sqlalchemy = "*"
 wtforms = "*"
 flask-wtf = "*"
+flask-socketio = "*"
 
 [dev-packages]
 pylint = "*"

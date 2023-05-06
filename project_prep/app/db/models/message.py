@@ -9,8 +9,8 @@ class Message(db.Model):
     sent_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     
     # Foregin Keys
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    channel_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    channel_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     
     # Common Keys
     id = db.Column(db.Integer, primary_key=True)

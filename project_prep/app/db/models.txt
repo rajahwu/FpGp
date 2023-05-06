@@ -8,5 +8,3 @@ from .teams import teams
 
 from .memberships import channel, team
 
-class User:
-    __tablename__ = "users

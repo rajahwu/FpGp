@@ -9,8 +9,8 @@ class team_membership(db.Model):
     joined_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     
     # Foreign Keys
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    channel_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    channel_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     
     
     # Methods
