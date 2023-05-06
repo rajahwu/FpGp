@@ -23,12 +23,14 @@ class UserSeeder:
 
             users = User.query.all()
             return users
-
-    def get_all_users(self):
+        
+    @classmethod
+    def get_all_users(cls):
         with app.app_context():
             return User.query.all()
-
-    def clear_users(self):
+        
+    @classmethod
+    def clear_users(cls):
         with app.app_context():
             deleted_users = db.session.execute(text("DELETE FROM users"))
             num_deleted = deleted_users.rowcount
@@ -36,8 +38,8 @@ class UserSeeder:
             return num_deleted
 
 
-seeder = UserSeeder()
-seeder.clear_users()
-seeder.generate_users(5)
-users = seeder.get_all_users()
-print(users)
+# seeder = UserSeeder()
+# seeder.clear_users()
+# seeder.generate_users(5)
+# users = seeder.get_all_users()
+# print(users)

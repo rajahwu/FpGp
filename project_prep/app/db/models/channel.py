@@ -21,4 +21,4 @@ class Channel(db.Model):
     
     # Methods
     def __repr__(self):
-        return f'<Channel id:{self.id}, name:{self.name} :: {self.created_at}>'
+        return f'<Channel id: {self.id}, name: {self.name} team_id: {self.team_id} :: {self.created_at}>'

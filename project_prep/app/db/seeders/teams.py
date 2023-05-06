@@ -16,20 +16,22 @@ class TeamSeeder:
                             image_url=self.fake.image_url())
                 db.session.add(team)
             db.session.commit()
+            
+    @classmethod
+    def get_all_teams(cls):
+        with app.app_context():
+            return Team.query.all()
 
-    def clear_teams(self):
+    @classmethod
+    def clear_teams(cls):
         with app.app_context():
             deleted_teams = db.session.execute(text("DELETE FROM teams"))
             num_deleted = deleted_teams.rowcount
             db.session.commit()
             return num_deleted
-    
-    def get_all_teams(self):
-        with app.app_context():
-            return Team.query.all()
         
-seeder = TeamSeeder()
-seeder.clear_teams()
-seeder.generate_teams(5)
-teams = seeder.get_all_teams()
-print(teams)
+# seeder = TeamSeeder()
+# seeder.clear_teams()
+# seeder.generate_teams(5)
+# teams = seeder.get_all_teams()
+# print(teams)
