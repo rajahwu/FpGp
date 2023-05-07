@@ -2,7 +2,7 @@ from faker import Faker
 from random import choice
 from app.db.dev import db
 from app.db.models import Channel
-from . import UserSeeder, TeamSeeder
+from app.db.seeders import UserSeeder, TeamSeeder
 
 
 class ChannelSeeder:

@@ -2,35 +2,34 @@ from faker import Faker
 from random import choice, randint
 from app.db.dev import db
 from app.db.models import Message
-from . import UserSeeder, ChannelSeeder
+from app.db.seeders import UserSeeder, ChannelSeeder
 
 
 class MessageSeeder:
     """
     Seeder class for generating message records.
     """
+
     def __init__(self):
         self.fake = Faker()
 
-    def generate_messages(self, num=3):
+    def generate_messages(self, num=3, users=None, channels=None):
         """
         Generate a random number of messages for all users: range(1, num).
 
         Args:
             num (int, optional): End range for number of messages. Defaults to 3.
+            users (list, optional): List of users to generates messages for. Defaults to None.
+            channels (list, optional): List of channels to assigns messages to.
 
         Returns:
             list: A list of generated message records.
         """
-        users = UserSeeder.get_all_users()
-        channels = ChannelSeeder.get_all_channels()
 
-        if len(users) == 0:
-            UserSeeder.generate_users(5)
+        if not users:
             users = UserSeeder.get_all_users()
 
-        if len(channels) == 0:
-            ChannelSeeder.generate_channels(5)
+        if not channels:
             channels = ChannelSeeder.get_all_channels()
 
         for user in users:
