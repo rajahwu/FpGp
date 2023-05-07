@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Seeder Package &#8212; Group Project Prep  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to My Project’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-users">
+<span id="seeder-package"></span><h1>Seeder Package<a class="headerlink" href="#module-users" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="users.UserSeeder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">users.</span></span><span class="sig-name descname"><span class="pre">UserSeeder</span></span><a class="headerlink" href="#users.UserSeeder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Seeder class for generating user data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="users.UserSeeder.clear_users">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#users.UserSeeder.clear_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all user records.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: Number of deleted user records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="users.UserSeeder.generate_users">
+<span class="sig-name descname"><span class="pre">generate_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#users.UserSeeder.generate_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a specified number of user records.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>count (int): The number of user records to generate.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list : A list of generated user records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="users.UserSeeder.get_all_users">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#users.UserSeeder.get_all_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Querys for all user records.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: A list of all user records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-teams"></span><dl class="py class">
+<dt class="sig sig-object py" id="teams.TeamSeeder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">teams.</span></span><span class="sig-name descname"><span class="pre">TeamSeeder</span></span><a class="headerlink" href="#teams.TeamSeeder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Seeder class for generating team data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="teams.TeamSeeder.clear_teams">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_teams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#teams.TeamSeeder.clear_teams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all user records.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: Number of deleted team records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="teams.TeamSeeder.generate_teams">
+<span class="sig-name descname"><span class="pre">generate_teams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#teams.TeamSeeder.generate_teams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a specified number of team records.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>count (int): The number of team records to generate.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list of generated team records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="teams.TeamSeeder.get_all_teams">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_teams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#teams.TeamSeeder.get_all_teams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Querys for all team records</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: A list of all team records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-channels"></span><dl class="py class">
+<dt class="sig sig-object py" id="channels.ChannelSeeder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">channels.</span></span><span class="sig-name descname"><span class="pre">ChannelSeeder</span></span><a class="headerlink" href="#channels.ChannelSeeder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Seeder class for generating channel data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="channels.ChannelSeeder.clear_channels">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#channels.ChannelSeeder.clear_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all channel records.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>init: Number of deleted channel records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="channels.ChannelSeeder.generate_channels">
+<span class="sig-name descname"><span class="pre">generate_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#channels.ChannelSeeder.generate_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a specified number of channel records.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>num (int, optional): The number of channel records to generate. Defaults to the number of teams.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list a generated channel records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="channels.ChannelSeeder.get_all_channels">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#channels.ChannelSeeder.get_all_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Querys for all channel records</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: A list of all channel records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-messages"></span><dl class="py class">
+<dt class="sig sig-object py" id="messages.MessageSeeder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">messages.</span></span><span class="sig-name descname"><span class="pre">MessageSeeder</span></span><a class="headerlink" href="#messages.MessageSeeder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Seeder class for generating message records.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="messages.MessageSeeder.clear_messages">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#messages.MessageSeeder.clear_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all message records.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>int: Number of deleted message records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="messages.MessageSeeder.generate_messages">
+<span class="sig-name descname"><span class="pre">generate_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">users</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#messages.MessageSeeder.generate_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random number of messages for all users: range(1, num).</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>num (int, optional): End range for number of messages. Defaults to 3.
+users (list, optional): List of users to generates messages for. Defaults to None.
+channels (list, optional): List of channels to assigns messages to.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list of generated message records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Group Project Prep</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seeder Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#users.UserSeeder"><code class="docutils literal notranslate"><span class="pre">UserSeeder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teams.TeamSeeder"><code class="docutils literal notranslate"><span class="pre">TeamSeeder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#channels.ChannelSeeder"><code class="docutils literal notranslate"><span class="pre">ChannelSeeder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#messages.MessageSeeder"><code class="docutils literal notranslate"><span class="pre">MessageSeeder</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to My Project’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, rajahwu.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/seeder.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

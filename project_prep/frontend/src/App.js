@@ -1,9 +1,10 @@
 import React from "react";
-import Users from "./componets/Users";
+import Users from "./components/Users";
 
 function App() {
   return (
     <>
+      <a href="../html/index.html">Docs</a>
       <h1>Hello world!</h1>
       <Users />
     </>
