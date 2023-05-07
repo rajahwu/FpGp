@@ -1,5 +1,4 @@
 from faker import Faker
-from sqlalchemy.sql import text
 from app.db.dev import db
 from app.db.models import Team
 
@@ -50,8 +49,7 @@ class TeamSeeder:
         Returns:
             int: Number of deleted team records.
         """
-        deleted_teams = db.session.execute(text("DELETE FROM teams"))
-        num_deleted = deleted_teams.rowcount
+        num_deleted = db.session.query(Team).delete()
         db.session.commit()
         return num_deleted
 

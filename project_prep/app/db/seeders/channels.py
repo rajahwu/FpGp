@@ -1,5 +1,4 @@
 from faker import Faker
-from sqlalchemy.sql import text
 from random import choice
 from app.db.dev import db
 from app.db.models import Channel

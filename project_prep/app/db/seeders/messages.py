@@ -1,5 +1,4 @@
 from faker import Faker
-from sqlalchemy.sql import text
 from random import choice, randint
 from app.db.dev import db
 from app.db.models import Message
@@ -55,7 +54,6 @@ class MessageSeeder:
         Returns:
             int: Number of deleted message records.
         """
-        deleted_messages = db.session.execute(text("DELETE FROM messages"))
-        num_deleted = deleted_messages
+        num_deleted = db.session.query(Message).delete()
         db.session.commit()
         return num_deleted

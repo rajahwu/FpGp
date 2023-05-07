@@ -1,5 +1,4 @@
 from faker import Faker
-from sqlalchemy.sql import text
 from app.db.dev import db
 from app.db.models import User
 
