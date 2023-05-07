@@ -17,8 +17,24 @@ function Users() {
     fetchData();
   }, []);
 
-  console.log(users);
-  return <h1>Users</h1>;
+  
+  return (
+    <>
+  <h1>Users</h1>
+    <ul style={{listStyle:"none"}}>
+      {users.users.map((user) => {
+        return (
+          <>
+          <li>Id {user.id}</li>
+          <li>{user.firstName} {user.lastName}</li>
+          <li>{user.email}</li>
+          </>
+        )
+      })}
+    </ul>
+    </>
+  ) 
+  
 }
 
 export default Users;

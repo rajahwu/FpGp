@@ -4,7 +4,7 @@ from ..db.models import User
 
 bp = Blueprint("users", __name__)
 
-@bp.route("")
+@bp.route("/")
 def get_all_user():
     users = User.query.all()
     res = [user.to_dict() for user in users]
