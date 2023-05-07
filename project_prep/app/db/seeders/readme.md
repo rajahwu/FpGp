@@ -50,7 +50,8 @@ def seed():
         "users": 5,
         "teams": 5,
         "channels": 5,
-        "messages": 5
+        # random messages in range(1, messages_per_user)
+        "messages_per_user": 5
     }
 
     user_records = users.generate_users(num_of["users"])
@@ -79,12 +80,12 @@ def seed():
 
     message_records = messages.generate_messages(
         num_of["messages"], users=user_records, channels=channel_records)
-    if len(message_records) < num_of["messages"]:
+    if len(message_records) < num_of["messages_per_user"]:
         raise ValueError(
             RED + "Failed to generate the expected number of message records" + RESET)
     else:
         print(
-            f'{GREEN}{num_of["messages"]} Messages Records Generated{RESET} \n {message_records}')
+            f'{GREEN}{num_of["messages_per_user"]} Messages Records Generated{RESET} \n {message_records}')
 
 
 @seed_commands.command("undo")
