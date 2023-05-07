@@ -8,7 +8,7 @@
 
 ```bash
 # cd into project_prep/_build/html
-cd pre_group_project/project_prep/_build/html
+cd pre_group_project/project_prep/static/docs/html
 
 # run python server
 python -m http.server
