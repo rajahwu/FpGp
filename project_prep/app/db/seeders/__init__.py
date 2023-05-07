@@ -56,7 +56,7 @@ def seed():
             f'{GREEN}{num_of["channels"]} Channel Records Generated{RESET} \n {user_records}')
 
     message_records = messages.generate_messages(
-        num_of["messages"], users=user_records, channels=channel_records)
+        num_of["messages_per_user"], users=user_records, channels=channel_records)
     if len(message_records) < num_of["messages_per_user"]:
         raise ValueError(
             RED + "Failed to generate the expected number of message records" + RESET)

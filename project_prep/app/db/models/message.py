@@ -17,19 +17,13 @@ class Message(db.Model):
 
     """
     __tablename__ = "messages"
-    # Table Keys
+    id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(2000))
     sent_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
-
-    # Foregin Keys
-    user_id = db.Column(db.Integer, db.ForeignKey("users"), nullable=False)
-    channel_id = db.Column(db.Integer, db.ForeignKey("channels"), nullable=False)
-
-    # Common Keys
-    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    channel_id = db.Column(db.Integer, db.ForeignKey("channels.id"), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
 
-    # Methods
     def __repr__(self):
         return f'<Message id: {self.id}, user_id: {self.user_id}, channel_id: {self.channel_id} sent: {self.sent_at}>'

@@ -14,16 +14,12 @@ class ChannelMembership(db.Model):
         team_id (int): The ID of the team associated with the membership (foreign key).
     """
     __tablename__ = "channel_memberships"
-    # Common Keys
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String(255), nullable=False)
     joined_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    team_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     
-    # Foreign Keys
-    user_id = db.Column(db.Integer, db.ForeignKey("users"), nullable=False)
-    team_id = db.Column(db.Integer, db.ForeignKey("users"), nullable=False)
-    
-    # Methods
     def __repr__(self):
         return f'<Channel (Membership) user_id{self.user_id}, team_id{self.team_id}>' 
     
