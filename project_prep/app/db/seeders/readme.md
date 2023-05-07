@@ -55,7 +55,7 @@ def seed():
     }
 
     user_records = users.generate_users(num_of["users"])
-    if len(user_records) < num_of["users"]:
+    if len(user_records) != num_of["users"]:
         raise ValueError(
             RED + "Failed to generate the expected number of user records") + RESET
     else:
@@ -63,7 +63,7 @@ def seed():
             f'{GREEN}{num_of["users"]} User records successfully generated{RESET} \n {user_records}')
 
     team_records = teams.generate_teams(num_of["teams"])
-    if len(team_records) < num_of["teams"]:
+    if len(team_records) != num_of["teams"]:
         raise ValueError(
             RED + "Failed to generate the expected number of user records" + RESET)
     else:
@@ -71,7 +71,7 @@ def seed():
             f'{GREEN}{num_of["teams"]} Team records successfully generated{RESET} \n {team_records}')
 
     channel_records = channels.generate_channels(num_of["channels"])
-    if len(channel_records) < num_of["channels"]:
+    if len(channel_records) != num_of["channels"]:
         raise ValueError(
             RED + "Failed to generate the expected number of channel records" + RESET)
     else:
