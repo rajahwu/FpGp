@@ -9,7 +9,7 @@ function Message() {
 
   useEffect(() => {
     socket = io();
-    socket.on("chat", (chat) => {
+    socket.on("ping", (chat) => {
     console.log(chat)
       console.log(msg);
     });

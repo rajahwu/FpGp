@@ -1,2 +1,2 @@
-from .channel import channel_membership
-from .team import team_membership
+from .channel import ChannelMembership
+from .team import TeamMembership
