@@ -13,7 +13,6 @@ function Users() {
         console.log("Error fetching data: ", error);
       }
     };
-
     fetchData();
   }, []);
 
