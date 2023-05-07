@@ -1,17 +1,31 @@
 from faker import Faker
 from sqlalchemy.sql import text
-# from app import app
 from app.db.dev import db
 from app.db.models import User
 
 
 class UserSeeder:
+    """
+    Seeder class for generating user data.
+    """
+
     def __init__(self):
+        """
+        Initialize the UserSeeder class.
+        """
         self.fake = Faker()
 
-    def generate_users(self, num):
-        # with app.app_context():
-        for _ in range(num):
+    def generate_users(self, count):
+        """
+        Generate a specified number of user records.
+
+        Args:
+            count (int): The number of user records to generate.
+
+        Returns:
+            list : A list of generated user records.
+        """
+        for _ in range(count):
             user = User(
                 first_name=self.fake.first_name(),
                 last_name=self.fake.last_name(),
@@ -26,20 +40,23 @@ class UserSeeder:
 
     @classmethod
     def get_all_users(cls):
-        # with app.app_context():
+        """
+        Querys for all user records.
+
+        Returns:
+            list: A list of all user records.
+        """
         return User.query.all()
 
     @classmethod
     def clear_users(cls):
-        # with app.app_context():
-        deleted_users = db.session.execute(text("DELETE FROM users"))
-        num_deleted = deleted_users.rowcount
+        """
+        Deletes all user records.
+
+        Returns:
+            int: Number of deleted user records.
+        """
+        
+        num_deleted = db.session.query(User).delete()
         db.session.commit()
         return num_deleted
-
-
-# seeder = UserSeeder()
-# seeder.clear_users()
-# seeder.generate_users(5)
-# users = seeder.get_all_users()
-# print(users)

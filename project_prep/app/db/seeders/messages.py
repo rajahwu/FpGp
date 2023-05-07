@@ -1,18 +1,28 @@
 from faker import Faker
 from sqlalchemy.sql import text
 from random import choice, randint
-# from app import app
 from app.db.dev import db
 from app.db.models import Message
 from . import UserSeeder, ChannelSeeder
 
 
 class MessageSeeder:
+    """
+    Seeder class for generating message records.
+    """
     def __init__(self):
         self.fake = Faker()
 
     def generate_messages(self, num=3):
-        # with app.app_context():
+        """
+        Generate a random number of messages for all users: range(1, num).
+
+        Args:
+            num (int, optional): End range for number of messages. Defaults to 3.
+
+        Returns:
+            list: A list of generated message records.
+        """
         users = UserSeeder.get_all_users()
         channels = ChannelSeeder.get_all_channels()
 
@@ -39,12 +49,13 @@ class MessageSeeder:
 
     @classmethod
     def clear_messages(cls):
-        # with app.app_context():
+        """
+        Deletes all message records.
+
+        Returns:
+            int: Number of deleted message records.
+        """
         deleted_messages = db.session.execute(text("DELETE FROM messages"))
         num_deleted = deleted_messages
         db.session.commit()
         return num_deleted
-
-# seeder = MessageSeeder()
-# MessageSeeder.clear_messages()
-# seeder.generate_messages()
