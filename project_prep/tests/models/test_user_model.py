@@ -1,7 +1,7 @@
 from flask import current_app
 from flask_testing import TestCase
-from .app import create_app, db
-from .app.db.models import User
+from app import create_app, db
+from app.db.models import User
 
 
 class UserModelTestCase(TestCase):
