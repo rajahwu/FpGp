@@ -13,6 +13,7 @@ sqlalchemy = "*"
 wtforms = "*"
 flask-wtf = "*"
 flask-socketio = "*"
+flask-cors = "*"
 
 [dev-packages]
 pylint = "*"

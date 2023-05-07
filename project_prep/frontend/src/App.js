@@ -1,5 +1,6 @@
 import React from "react";
 import Users from "./components/Users";
+import Message from "./components/Message";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <a href="../html/index.html">Docs</a>
       <h1>Hello world!</h1>
       <Users />
+      <Message />
     </>
   );
 }
