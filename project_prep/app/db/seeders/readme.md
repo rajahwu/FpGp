@@ -4,6 +4,8 @@
 
 ![project docs page](../../../assets/group_project_doc.png)
 
+### View Docs in brower
+
 ```bash
 # cd into project_prep/_build/html
 cd pre_group_project/project_prep/_build/html
@@ -222,7 +224,7 @@ class TeamSeeder:
 ### Channels
 
 ```py
-    from faker import Faker
+from faker import Faker
 from random import choice
 from app.db.dev import db
 from app.db.models import Channel
