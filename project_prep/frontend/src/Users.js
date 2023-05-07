@@ -17,24 +17,24 @@ function Users() {
     fetchData();
   }, []);
 
-  
   return (
     <>
-  <h1>Users</h1>
-    <ul style={{listStyle:"none"}}>
-      {users.users.map((user) => {
-        return (
-          <>
-          <li>Id {user.id}</li>
-          <li>{user.firstName} {user.lastName}</li>
-          <li>{user.email}</li>
-          </>
-        )
-      })}
-    </ul>
+      <h1>Users</h1>
+      <ul style={{ listStyle: "none" }}>
+        {users.users?.map((user) => {
+          return (
+            <div key={user.id}>
+              <li>Id {user.id}</li>
+              <li>
+                {user.firstName} {user.lastName}
+              </li>
+              <li>{user.email}</li>
+            </div>
+          );
+        })}
+      </ul>
     </>
-  ) 
-  
+  );
 }
 
 export default Users;
