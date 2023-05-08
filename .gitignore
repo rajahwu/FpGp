@@ -1,2 +1,5 @@
 note.txt
 dev.db
+.venv
+*.db
+node_modules
